@@ -8,6 +8,21 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <fragment
+            android:id="@+id/fragOne"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="com.hh.fragementpractice01.fragements.FragementOne"
+            />
+
+        <fragment
+            android:id="@+id/fragTwo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            class="com.hh.fragementpractice01.fragements.FragementTwo"
+            />
+
+
 
     </LinearLayout>
 
