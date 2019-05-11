@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.hh.fragementpractice01.MainActivity;
 import com.hh.fragementpractice01.R;
 import com.hh.fragementpractice01.databinding.Fragment01Binding;
 
@@ -45,7 +46,20 @@ public class FragementOne extends Fragment {
 
         binding.myTextView.setText("데이터 바인딩 이용");
 
+        binding.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = binding.titleEdt.getText().toString();
+
+                ((MainActivity) getActivity()).setCustomTitle(title);
+            }
+        });
 
 
+
+    }
+
+    public void changeTextMsg(String inputMessage) {
+        binding.myTextView.setText(inputMessage);
     }
 }
